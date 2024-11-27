@@ -1,0 +1,14 @@
+// 1.21.1	2024-11-26T23:29:05.406508	Deep Overworld/Model Definitions
+29fefec149db4c1f59d067f4bf048333766b0940 assets/deepoverworld/blockstates/grasin.json
+8e8e584286f8324b5e4c477b8fa61d70644e5acf assets/deepoverworld/blockstates/deep_wood.json
+393ed380c13bcd6b69a21884ae41c4615e9fb09b assets/deepoverworld/blockstates/deep_sapling.json
+ecd9e646f72bb0e7e031802599656feef5033d57 assets/deepoverworld/models/block/deep_sapling.json
+832e84426e102ff2cfd7f37c1d4083fe03ee5b26 assets/deepoverworld/models/item/grasin.json
+b7dd5c9eda2025a419003b70e8b945a4d6e0031f assets/deepoverworld/models/block/deep_log.json
+b9bde1b1c88cb9efe474e682a90dcce21ed34bd7 assets/deepoverworld/models/block/deep_log_horizontal.json
+ec19adb422df5d5caeca6d1d01fe53bc2399e285 assets/deepoverworld/blockstates/deep_log.json
+6a488b629cacb54cc6e087ae7d8837ea529a69a4 assets/deepoverworld/models/item/deep_log.json
+ffee8e75a5293b34d058237b87142223a772b743 assets/deepoverworld/models/block/deep_wood.json
+6abce846e8db9bd23b0d25a2b6b0399ac0afc4ce assets/deepoverworld/models/item/deep_wood.json
+7ce911abcc97b61d3d25bb559eaf5432d7a17cb7 assets/deepoverworld/models/block/grasin.json
+2246f410c5141941b2e8ec04dc60035ef51fc23d assets/deepoverworld/models/item/deep_sapling.json

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "deepoverworld:block/deepslate_grass",
+    "side": "deepoverworld:block/deepslate_grass_side",
+    "bottom": "minecraft:block/deepslate"
+  }
+}
