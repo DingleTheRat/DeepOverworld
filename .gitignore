@@ -1,4 +1,8 @@
 # eclipse
+.gradle/
+build/
+out/
+classes/
 
 *.launch
 
