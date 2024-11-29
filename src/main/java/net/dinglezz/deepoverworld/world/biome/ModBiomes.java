@@ -17,11 +17,11 @@ import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 public class ModBiomes {
-    public static final RegistryKey<Biome> TEST_BIOME =
-            RegistryKey.of(RegistryKeys.BIOME, Identifier.of(DeepOverworld.MOD_ID, "test_biome"));
+    public static final RegistryKey<Biome> DEEP_FOREST =
+            RegistryKey.of(RegistryKeys.BIOME, Identifier.of(DeepOverworld.MOD_ID, "deep_forest"));
 
     public static void bootstrap(Registerable<Biome> context) {
-        context.register(TEST_BIOME, testBiome(context));
+        context.register(DEEP_FOREST, deep_forest(context));
     }
 
     public static void globalOverworldGeneration(GenerationSettings.LookupBackedBuilder builder) {
@@ -33,7 +33,7 @@ public class ModBiomes {
         DefaultBiomeFeatures.addFrozenTopLayer(builder);
     }
 
-    public static Biome testBiome(Registerable<Biome> context){
+    public static Biome deep_forest(Registerable<Biome> context){
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.ARMADILLO, 2, 3, 5));
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.ZOMBIE_HORSE, 2, 5, 10));

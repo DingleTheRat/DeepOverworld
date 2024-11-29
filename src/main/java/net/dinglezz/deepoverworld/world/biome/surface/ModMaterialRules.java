@@ -16,7 +16,7 @@ public class ModMaterialRules {
         MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, DEEPSLATE_GRASS), DEEPSLATE);
 
         return MaterialRules.sequence(
-                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.TEST_BIOME),
+                MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.DEEP_FOREST),
                                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, DEEPSLATE_GRASS)),
                         MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, DEEPSLATE)),
                         MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6, DEEPSLATE),

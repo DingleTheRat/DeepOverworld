@@ -52,7 +52,7 @@ public class DeepSapling extends PlantBlock implements Fertilizable {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(ModTags.Blocks.IS_DEEP_PLANTABLE) || floor.isOf(Blocks.GRASS_BLOCK) || super.canPlantOnTop(floor, world, pos);
+        return floor.isIn(ModTags.Blocks.DEEP_VEGETATION) || floor.isOf(Blocks.GRASS_BLOCK) || super.canPlantOnTop(floor, world, pos);
     }
 
     public void generate(ServerWorld world, BlockPos pos, BlockState state, Random random) {

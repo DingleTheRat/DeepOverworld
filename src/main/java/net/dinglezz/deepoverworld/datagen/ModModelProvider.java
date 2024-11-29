@@ -14,8 +14,8 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
     blockStateModelGenerator.registerLog(ModBlocks.DEEP_LOG).log(ModBlocks.DEEP_LOG).wood(ModBlocks.DEEP_WOOD);
-    blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN);
-    blockStateModelGenerator.registerTintableCross(ModBlocks.DEEP_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+    blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DECAYED_GRASIN);
+    blockStateModelGenerator.registerTintableCross(ModBlocks.DEEP_SPROUT, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

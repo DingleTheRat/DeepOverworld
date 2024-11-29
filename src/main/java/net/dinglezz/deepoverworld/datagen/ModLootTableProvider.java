@@ -28,8 +28,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_GRASS);
         addDrop(ModBlocks.DEEP_LOG);
         addDrop(ModBlocks.DEEP_WOOD);
-        addDrop(ModBlocks.GRASIN);
-        addDrop(ModBlocks.DEEP_SAPLING);
+        addDrop(ModBlocks.DECAYED_GRASIN);
+        addDrop(ModBlocks.DEEP_SPROUT);
     }
 
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

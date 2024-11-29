@@ -9,7 +9,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    //Deep
     public static final Item DEEP_BERRIES = registerItem("deep_berries",
             new AliasedBlockItem(ModBlocks.DEEP_BERRY_BUSH, new Item.Settings()));// NOTE!!!! 1.21.3 alias block item is a setting!!!!!
 

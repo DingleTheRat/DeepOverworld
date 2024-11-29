@@ -23,7 +23,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEP_LOG)
                 .add(ModBlocks.DEEP_WOOD);
 
-        getOrCreateTagBuilder(ModTags.Blocks.IS_DEEP_PLANTABLE)
+        getOrCreateTagBuilder(ModTags.Blocks.DEEP_VEGETATION)
                 .add(ModBlocks.DEEPSLATE_GRASS);
     }
 }

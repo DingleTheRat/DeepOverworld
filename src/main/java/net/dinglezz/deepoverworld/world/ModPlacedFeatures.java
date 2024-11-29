@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
 
         register(context, DEEP_TREE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.DEEP_TREE_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(18, 0.2f, 2),
-                        ModBlocks.DEEP_SAPLING));
+                        ModBlocks.DEEP_SPROUT));
     }
 
     public static RegistryKey<PlacedFeature> registryKey(String name) {

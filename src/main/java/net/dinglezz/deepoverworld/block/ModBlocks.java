@@ -18,10 +18,10 @@ public class ModBlocks {
     public static final Block DEEPSLATE_GRASS = registerBlock("deepslate_grass",
             new GrassBlock(AbstractBlock.Settings.create().strength(3.0F, 6.0F)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
-    public static final Block GRASIN = registerBlock("grasin",
+    public static final Block DECAYED_GRASIN = registerBlock("decayed_grasin",
             new Block(AbstractBlock.Settings.create().strength(2.0F, 5.0F).sounds(BlockSoundGroup.WART_BLOCK).requiresTool().nonOpaque()));
 
-    public static final Block DEEP_SAPLING = registerBlock("deep_sapling",
+    public static final Block DEEP_SPROUT = registerBlock("deep_sprout",
         new DeepSapling(ModSaplingGenerators.DEEP, AbstractBlock.Settings.create().noCollision().ticksRandomly().breakInstantly()
                 .pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.NYLIUM).nonOpaque()));
     public static final Block DEEP_BERRY_BUSH = registerBlockWithoutBlockItem("deep_berry_bush",

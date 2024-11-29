@@ -1,6 +1,6 @@
-// 1.21.1	2024-11-26T23:29:05.407509	Deep Overworld/Block Loot Tables
-7821a236fb4d9b9c88aaf886f8b9569e27a11966 data/deepoverworld/loot_table/blocks/grasin.json
-d4198521beca3d30b8b416b58ae68baf24cea791 data/deepoverworld/loot_table/blocks/deep_wood.json
-9fe9a21badefc7b464bca384e90f91f1789c7cf4 data/deepoverworld/loot_table/blocks/deep_sapling.json
-5eae73dfeeabe5adad1a3b15e547f45664ad59d9 data/deepoverworld/loot_table/blocks/deep_log.json
-4e529ba8e7a445b7d5a7b923b2a31193d0183058 data/deepoverworld/loot_table/blocks/deepslate_grass.json
+// 1.21.1	2024-11-28T19:13:34.885224	Deep Overworld/Block Loot Tables
+9ed9746cc1b08610bb67f6f1d75b4f2b205cbc89 data\deepoverworld\loot_table\blocks\decayed_grasin.json
+5eae73dfeeabe5adad1a3b15e547f45664ad59d9 data\deepoverworld\loot_table\blocks\deep_log.json
+3054b6b15b727e0bdaf41df9670fe816243e78e3 data\deepoverworld\loot_table\blocks\deep_sprout.json
+d4198521beca3d30b8b416b58ae68baf24cea791 data\deepoverworld\loot_table\blocks\deep_wood.json
+4e529ba8e7a445b7d5a7b923b2a31193d0183058 data\deepoverworld\loot_table\blocks\deepslate_grass.json

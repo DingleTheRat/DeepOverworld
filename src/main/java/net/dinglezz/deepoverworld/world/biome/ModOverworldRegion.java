@@ -28,7 +28,7 @@ public class ModOverworldRegion extends Region {
                 .erosion(ParameterUtils.Erosion.EROSION_0, ParameterUtils.Erosion.EROSION_1)
                 .depth(ParameterUtils.Depth.SURFACE, ParameterUtils.Depth.SURFACE)
                 .weirdness(ParameterUtils.Weirdness.LOW_SLICE_VARIANT_ASCENDING, ParameterUtils.Weirdness.LOW_SLICE_NORMAL_DESCENDING)
-                .build().forEach(point -> builder.add(point, ModBiomes.TEST_BIOME));
+                .build().forEach(point -> builder.add(point, ModBiomes.DEEP_FOREST));
 
         // Add our points to the mapper
         builder.build().forEach(mapper);

@@ -20,8 +20,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.DEEPSLATE_GRASS);
                         entries.add(ModBlocks.DEEP_LOG);
                         entries.add(ModBlocks.DEEP_WOOD);
-                        entries.add(ModBlocks.GRASIN);
-                        entries.add(ModBlocks.DEEP_SAPLING);
+                        entries.add(ModBlocks.DECAYED_GRASIN);
+                        entries.add(ModBlocks.DEEP_SPROUT);
                     }).build());
 
 

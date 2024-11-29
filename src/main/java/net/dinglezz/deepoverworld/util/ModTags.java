@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
 
-       public static TagKey<Block> IS_DEEP_PLANTABLE = createTag("is_deep_plantable");
+       public static TagKey<Block> DEEP_VEGETATION = createTag("deep_vegatation");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name));
@@ -18,7 +18,6 @@ public class ModTags {
     }
 
     public static class Items {
-       // public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
 
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(DeepOverworld.MOD_ID, name));
