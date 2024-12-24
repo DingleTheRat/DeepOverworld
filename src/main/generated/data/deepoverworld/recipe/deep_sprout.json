@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "deepoverworld:grasin_b"
+    },
+    "S": {
+      "tag": "minecraft:saplings"
+    }
+  },
+  "pattern": [
+    "   ",
+    " G ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "deepoverworld:deep_sprout"
+  }
+}

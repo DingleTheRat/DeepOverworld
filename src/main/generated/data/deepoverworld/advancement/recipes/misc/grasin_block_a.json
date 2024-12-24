@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grasin_a": {
+      "conditions": {
+        "items": [
+          {
+            "items": "deepoverworld:grasin_a"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:grasin_block_a"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grasin_a"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:grasin_block_a"
+    ]
+  }
+}
