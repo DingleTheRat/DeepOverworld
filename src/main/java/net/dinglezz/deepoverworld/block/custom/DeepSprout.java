@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.dinglezz.deepoverworld.util.ModTags;
 import net.minecraft.block.*;
+import net.minecraft.item.Item;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -15,7 +16,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 
-public class DeepSapling extends PlantBlock implements Fertilizable {
+public class DeepSprout extends PlantBlock implements Fertilizable {
     public static final IntProperty STAGE = Properties.STAGE;
     public static final float field_31236 = 6.0F;
     public static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 12.0, 14.0);
@@ -26,7 +27,7 @@ public class DeepSapling extends PlantBlock implements Fertilizable {
         return CODEC;
     }
 
-    public DeepSapling(SaplingGenerator generator, Settings settings) {
+    public DeepSprout(SaplingGenerator generator, Settings settings) {
         super(settings);
         this.generator = generator;
         this.setDefaultState(this.stateManager.getDefaultState().with(STAGE, Integer.valueOf(0)));

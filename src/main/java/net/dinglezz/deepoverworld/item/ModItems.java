@@ -1,17 +1,44 @@
 package net.dinglezz.deepoverworld.item;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
-import net.dinglezz.deepoverworld.block.ModBlocks;
-import net.minecraft.item.AliasedBlockItem;
+import net.dinglezz.deepoverworld.item.custom.GrasinAItem;
+import net.dinglezz.deepoverworld.item.custom.GrasinBItem;
+import net.dinglezz.deepoverworld.item.custom.GrasinCItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ModItems {
-    public static final Item DEEP_BERRIES = registerItem("deep_berries",
-            new AliasedBlockItem(ModBlocks.DEEP_BERRY_BUSH, new Item.Settings()));// NOTE!!!! 1.21.3 alias block item is a setting!!!!!
+import java.util.List;
 
+public class ModItems {
+    //Grasin
+    public static final Item GRASIN_A = registerItem("grasin_a", new GrasinAItem(new Item.Settings()){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip_deepoverworld_grasin_a.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item GRASIN_B = registerItem("grasin_b", new GrasinBItem(new Item.Settings()){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip_deepoverworld_grasin_b.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+    public static final Item GRASIN_C = registerItem("grasin_c", new GrasinCItem(new Item.Settings()){
+        @Override
+        public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+            tooltip.add(Text.translatable("tooltip_deepoverworld_grasin_c.tooltip"));
+            super.appendTooltip(stack, context, tooltip, type);
+        }
+    });
+
+    // Functions
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(DeepOverworld.MOD_ID, name), item);
     }

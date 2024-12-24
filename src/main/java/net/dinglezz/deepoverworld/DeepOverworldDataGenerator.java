@@ -1,6 +1,7 @@
 package net.dinglezz.deepoverworld;
 
 import net.dinglezz.deepoverworld.datagen.*;
+import net.dinglezz.deepoverworld.enchantment.ModEnchantments;
 import net.dinglezz.deepoverworld.world.ModConfiguredFeatures;
 import net.dinglezz.deepoverworld.world.ModPlacedFeatures;
 import net.dinglezz.deepoverworld.world.biome.ModBiomes;
@@ -29,5 +30,6 @@ public class DeepOverworldDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
 	}
 }

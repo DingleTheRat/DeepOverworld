@@ -1,5 +1,8 @@
 {
   "values": [
-    "deepoverworld:deepslate_grass"
+    "deepoverworld:deepslate_grass",
+    "deepoverworld:grasin_block_a",
+    "deepoverworld:grasin_block_c",
+    "deepoverworld:grasin_block_b"
   ]
 }

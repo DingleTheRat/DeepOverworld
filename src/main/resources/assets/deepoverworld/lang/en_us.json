@@ -3,7 +3,37 @@
   "block.deepoverworld.deep_log": "Deep Log",
   "block.deepoverworld.deep_wood": "Deep Wood",
   "block.deepoverworld.decayed_grasin": "Decayed Grasin",
+  "block.deepoverworld.grasin_block_a": "Block of Grasin A",
+  "block.deepoverworld.grasin_block_b": "Block of Grasin B",
+  "block.deepoverworld.grasin_block_c": "Block of Grasin C",
   "block.deepoverworld.deep_sprout": "Deep Sprout",
 
-  "itemgroup.deepoverworld.deep_overworld": "Deep Overworld"
+  "item.deepoverworld.grasin_a": "Grasin A",
+  "item.deepoverworld.grasin_b": "Grasin B",
+  "item.deepoverworld.grasin_c": "Grasin C",
+
+  "item.minecraft.potion.effect.grasin_poisoning_potion_uno": "Potion of Grasin Poisoning",
+  "item.minecraft.splash_potion.effect.grasin_poisoning_potion_uno": "Splash Potion of Grasin Poisoning",
+  "item.minecraft.lingering_potion.effect.grasin_poisoning_potion_uno": "Lingering Potion of Grasin Poisoning",
+  "item.minecraft.tipped_arrow.effect.grasin_poisoning_potion_uno": "Arrow of Grasin Poisoning",
+  "item.minecraft.potion.effect.grasin_poisoning_potion_dos": "Potion of Grasin Poisoning",
+  "item.minecraft.splash_potion.effect.grasin_poisoning_potion_dos": "Splash Potion of Grasin Poisoning",
+  "item.minecraft.lingering_potion.effect.grasin_poisoning_potion_dos": "Lingering Potion of Grasin Poisoning",
+  "item.minecraft.tipped_arrow.effect.grasin_poisoning_potion_dos": "Arrow of Grasin Poisoning",
+  "item.minecraft.potion.effect.grasin_poisoning_potion_tres": "Potion of Grasin Poisoning",
+  "item.minecraft.splash_potion.effect.grasin_poisoning_potion_tres": "Splash Potion of Grasin Poisoning",
+  "item.minecraft.lingering_potion.effect.grasin_poisoning_potion_tres": "Lingering Potion of Grasin Poisoning",
+  "item.minecraft.tipped_arrow.effect.grasin_poisoning_potion_tres": "Arrow of Grasin Poisoning",
+
+  "itemgroup.deepoverworld.deep_overworld": "Deep Overworld",
+
+  "effect.deepoverworld.grasin_poisoning_uno": "Grasin Poisoning",
+  "effect.deepoverworld.grasin_poisoning_dos": "Grasin Poisoning",
+  "effect.deepoverworld.grasin_poisoning_tres": "Grasin Poisoning",
+
+  "enchantment.deepoverworld.grasin_protection": "Grasin Protection",
+
+  "tooltip_deepoverworld_grasin_a.tooltip": "§6The safest one.§r",
+  "tooltip_deepoverworld_grasin_b.tooltip": "§6Quite dangerous.§r",
+  "tooltip_deepoverworld_grasin_c.tooltip": "§6STAY AWAY!§r"
 }

@@ -11,7 +11,7 @@ import terrablender.api.TerraBlenderApi;
 public class ModTerrablenderAPI implements TerraBlenderApi {
     @Override
     public void onTerraBlenderInitialized() {
-        Regions.register(new ModOverworldRegion(Identifier.of(DeepOverworld.MOD_ID, "overworld"), RegionType.OVERWORLD, 4));
+        Regions.register(new ModOverworldRegion(Identifier.of(DeepOverworld.MOD_ID, "overworld"), RegionType.OVERWORLD, 3));
 
         SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, DeepOverworld.MOD_ID, ModMaterialRules.makeRules());
     }

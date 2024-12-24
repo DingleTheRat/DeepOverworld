@@ -1,3 +1,17 @@
-// 1.21.1	2024-11-28T19:13:34.9012248	Deep Overworld/Recipes
-502e82f6575a40f5e01b3716d17068c66cbb02fe data\deepoverworld\recipe\deep_wood.json
-44d5f6735efc2774b85b6f50884b815c44d5222e data\deepoverworld\advancement\recipes\misc\deep_wood.json
+// 1.21.1	2024-12-20T23:17:45.920698	Deep Overworld/Recipes
+6e6f61492c7247c52db05c519e751a859ae5b19a data/deepoverworld/advancement/recipes/misc/grasin_block_b.json
+337f6f6d81157dcc11d7c0734a7964db5b5718a4 data/deepoverworld/advancement/recipes/tools/deep_sprout.json
+17a15174f4d923e2fd5946e3c8a04674a904c299 data/deepoverworld/advancement/recipes/misc/grasin_b.json
+588606d805814fd0170259812dc537c5ed77e2d3 data/deepoverworld/advancement/recipes/misc/grasin_c.json
+9db05d70b8794169ba81870b39ae160ec22bff0b data/deepoverworld/recipe/grasin_c.json
+48482d205101023527e89e1715d7bf8ea1853442 data/deepoverworld/recipe/grasin_block_a.json
+502e82f6575a40f5e01b3716d17068c66cbb02fe data/deepoverworld/recipe/deep_wood.json
+1a3a731966d8f6bd3abcbad3da0206d448ff2cb7 data/deepoverworld/advancement/recipes/misc/grasin_a.json
+d348a1af8910ae391c214c16317863eaef7e56ee data/deepoverworld/recipe/grasin_block_c.json
+f2a0f396aeab5129af136e70ce3cb27ba812c0c0 data/deepoverworld/recipe/grasin_b.json
+639f46567c03c7c7e99c8be0f5757a8b0b97ecb5 data/deepoverworld/recipe/deep_sprout.json
+44d5f6735efc2774b85b6f50884b815c44d5222e data/deepoverworld/advancement/recipes/misc/deep_wood.json
+df3a74af781741829682e3bc5b3d7d43b2fb8dab data/deepoverworld/advancement/recipes/misc/grasin_block_c.json
+428e46fe24b8acf3748b39347b8702f4e0758c16 data/deepoverworld/recipe/grasin_a.json
+44e622cb002fa48a668eb15da573b327472af172 data/deepoverworld/recipe/grasin_block_b.json
+262d09a54198b6e4135cce34e43582f3e73f6efc data/deepoverworld/advancement/recipes/misc/grasin_block_a.json
