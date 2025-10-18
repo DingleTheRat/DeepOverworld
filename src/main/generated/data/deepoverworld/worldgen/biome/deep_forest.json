@@ -90,23 +90,41 @@
         "type": "deepoverworld:grasin_bug_a",
         "maxCount": 3,
         "minCount": 1,
-        "weight": 500
+        "weight": 1000
       },
       {
         "type": "deepoverworld:grasin_bug_b",
         "maxCount": 2,
         "minCount": 1,
-        "weight": 250
+        "weight": 500
       },
       {
         "type": "deepoverworld:grasin_bug_c",
         "maxCount": 2,
         "minCount": 1,
-        "weight": 125
+        "weight": 250
       }
     ],
     "misc": [],
     "monster": [
+      {
+        "type": "deepoverworld:grasin_bug_a",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 1000
+      },
+      {
+        "type": "deepoverworld:grasin_bug_b",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 500
+      },
+      {
+        "type": "deepoverworld:grasin_bug_c",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 250
+      },
       {
         "type": "minecraft:spider",
         "maxCount": 4,
