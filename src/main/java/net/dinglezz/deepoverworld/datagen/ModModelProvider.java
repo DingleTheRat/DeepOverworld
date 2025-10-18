@@ -32,6 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GRASIN_A, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRASIN_B, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRASIN_C, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRASIN_GOO, Models.GENERATED);
         
         itemModelGenerator.register(ModItems.GRASIN_BUG_A_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));

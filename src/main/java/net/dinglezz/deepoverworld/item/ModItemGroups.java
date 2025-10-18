@@ -30,10 +30,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASIN_BOCK_B);
                         entries.add(ModBlocks.GRASIN_BOCK_C);
                         entries.add(ModBlocks.DEEP_SPROUT);
-                        
-                        entries.add(ModItems.GRASIN_BUG_A_SPAWN_EGG);
-                        entries.add(ModItems.GRASIN_BUG_B_SPAWN_EGG);
-                        entries.add(ModItems.GRASIN_BUG_C_SPAWN_EGG);
                     }).build());
 
 

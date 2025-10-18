@@ -42,6 +42,7 @@ public class GrasinBugCEntity extends GrasinBugEntity {
 			} else if (this.random.nextFloat() < 0.5f) {
 				this.dropStack(ModItems.GRASIN_C.getDefaultStack().copyWithCount(4));
 			}
+			this.dropStack(ModItems.GRASIN_GOO.getDefaultStack().copyWithCount(2));
 		}
 	}
 	
