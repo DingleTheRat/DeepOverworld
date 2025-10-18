@@ -1,8 +1,8 @@
-// 1.21.1	2025-10-17T09:45:15.1504632	Deep Overworld/Tags for minecraft:block
-e26f1b7e959c1567c2a94a543ab873826cf0522c data\minecraft\tags\block\mineable\axe.json
+// 1.21.1	2025-10-18T09:49:42.5317886	Deep Overworld/Tags for minecraft:block
 1994eeb0bdc5324d6a105764c2c39eb3ed65a3ec data\minecraft\tags\block\mineable\hoe.json
-e120d6e36e5fa1e45b1bb77111868ac1f365af68 data\minecraft\tags\block\needs_iron_tool.json
-ef0507e8ec406dec28e4f2f742c678a81a479e55 data\minecraft\tags\block\needs_stone_tool.json
-b640fcce5f42e4219cdca812866d9d2df7086c61 data\deepoverworld\tags\block\deep_vegatation.json
+e26f1b7e959c1567c2a94a543ab873826cf0522c data\minecraft\tags\block\mineable\axe.json
 3c3ec61108217f5446391e4eac044e8778e02637 data\minecraft\tags\block\mineable\pickaxe.json
+ef0507e8ec406dec28e4f2f742c678a81a479e55 data\minecraft\tags\block\needs_stone_tool.json
 ef0507e8ec406dec28e4f2f742c678a81a479e55 data\minecraft\tags\block\mineable\shovel.json
+b640fcce5f42e4219cdca812866d9d2df7086c61 data\deepoverworld\tags\block\deep_vegatation.json
+e120d6e36e5fa1e45b1bb77111868ac1f365af68 data\minecraft\tags\block\needs_iron_tool.json

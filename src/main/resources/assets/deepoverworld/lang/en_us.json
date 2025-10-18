@@ -12,6 +12,10 @@
   "item.deepoverworld.grasin_b": "Grasin B",
   "item.deepoverworld.grasin_c": "Grasin C",
 
+  "item.deepoverworld.grasin_bug_a_spawn_egg": "Grasin Bug Type A Spawn Egg",
+  "item.deepoverworld.grasin_bug_b_spawn_egg": "Grasin Bug Type B Spawn Egg",
+  "item.deepoverworld.grasin_bug_c_spawn_egg": "Grasin Bug Type C Spawn Egg",
+
   "item.minecraft.potion.effect.grasin_poisoning_potion_uno": "Potion of Grasin Poisoning",
   "item.minecraft.splash_potion.effect.grasin_poisoning_potion_uno": "Splash Potion of Grasin Poisoning",
   "item.minecraft.lingering_potion.effect.grasin_poisoning_potion_uno": "Lingering Potion of Grasin Poisoning",
@@ -35,5 +39,9 @@
 
   "tooltip_deepoverworld_grasin_a.tooltip": "§6The safest one.§r",
   "tooltip_deepoverworld_grasin_b.tooltip": "§6Quite dangerous.§r",
-  "tooltip_deepoverworld_grasin_c.tooltip": "§6STAY AWAY!§r"
+  "tooltip_deepoverworld_grasin_c.tooltip": "§6STAY AWAY!§r",
+
+  "entity.deepoverworld.grasin_bug_a": "Grasin Bug Type A",
+  "entity.deepoverworld.grasin_bug_b": "Grasin Bug Type B",
+  "entity.deepoverworld.grasin_bug_c": "Grasin Bug Type C"
 }
