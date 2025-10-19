@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "deepoverworld:block/deep_log"
+  }
+}

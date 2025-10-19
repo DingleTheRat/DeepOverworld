@@ -15,7 +15,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+        valueLookupBuilder(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.DEEP_LOG.asItem())
                 .add(ModBlocks.DEEP_WOOD.asItem());
     }

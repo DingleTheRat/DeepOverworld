@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "deepoverworld:grasin_a"
-    }
+    "#": "deepoverworld:grasin_a"
   },
   "pattern": [
     "###",

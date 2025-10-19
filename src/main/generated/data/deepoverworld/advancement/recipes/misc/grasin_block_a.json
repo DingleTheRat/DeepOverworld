@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:grasin_block_a"
+        "recipe": "deepoverworld:grasin_block_a"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:grasin_block_a"
+      "deepoverworld:grasin_block_a"
     ]
   }
 }

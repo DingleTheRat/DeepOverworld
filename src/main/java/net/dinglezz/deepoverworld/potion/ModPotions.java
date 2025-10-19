@@ -11,11 +11,11 @@ import net.minecraft.util.Identifier;
 
 public class ModPotions {
     public static final RegistryEntry<Potion> GRASIN_POISONING_POTION_UNO = registerPotion("grasin_poisoning_potion_uno",
-            new Potion(new StatusEffectInstance(ModEffects.GRASIN_POISONING_UNO, 1800, 0)));
+            new Potion("grasin_poisoning_potion_uno", new StatusEffectInstance(ModEffects.GRASIN_POISONING_UNO, 1800, 0)));
     public static final RegistryEntry<Potion> GRASIN_POISONING_POTION_DOS = registerPotion("grasin_poisoning_potion_dos",
-            new Potion(new StatusEffectInstance(ModEffects.GRASIN_POISONING_DOS, 1800, 1)));
+            new Potion("grasin_poisoning_potion_dos", new StatusEffectInstance(ModEffects.GRASIN_POISONING_DOS, 1800, 1)));
     public static final RegistryEntry<Potion> GRASIN_POISONING_POTION_TRES = registerPotion("grasin_poisoning_potion_tres",
-            new Potion(new StatusEffectInstance(ModEffects.GRASIN_POISONING_TRES, 1800, 2)));
+            new Potion("grasin_poisoning_potion_tres", new StatusEffectInstance(ModEffects.GRASIN_POISONING_TRES, 1800, 2)));
 
     private static RegistryEntry<Potion> registerPotion(String name, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(DeepOverworld.MOD_ID, name), potion);

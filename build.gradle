@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.8-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -21,7 +21,9 @@ repositories {
 }
 
 fabricApi {
-	configureDataGeneration()
+    configureDataGeneration() {
+        client = true
+    }
 }
 
 dependencies {
@@ -30,7 +32,7 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.1-4.1.0.5'
+	modImplementation 'com.github.glitchfiend:TerraBlender-fabric:1.21.10-21.10.0.0'
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"

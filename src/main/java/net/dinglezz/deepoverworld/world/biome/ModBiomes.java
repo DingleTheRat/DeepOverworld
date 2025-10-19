@@ -49,11 +49,11 @@ public class ModBiomes {
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
-        DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
-
-        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+//        DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
+//        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
+//
+//        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder, true);
 
         return new Biome.Builder()
                 .precipitation(false)
