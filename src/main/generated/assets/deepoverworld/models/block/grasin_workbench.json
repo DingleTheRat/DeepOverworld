@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "deepoverworld:block/grasin_workbench_bottom",
+    "side": "deepoverworld:block/grasin_workbench_side",
+    "top": "deepoverworld:block/grasin_workbench_top"
+  }
+}

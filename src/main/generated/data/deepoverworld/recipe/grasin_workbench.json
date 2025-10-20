@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "deepoverworld:grasin_a"
+    },
+    "B": {
+      "item": "deepoverworld:grasin_b"
+    },
+    "C": {
+      "item": "deepoverworld:grasin_c"
+    },
+    "G": {
+      "item": "deepoverworld:grasin_goo"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "P": {
+      "item": "deepoverworld:deep_wood"
+    }
+  },
+  "pattern": [
+    "BAC",
+    "IGI",
+    "PGP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "deepoverworld:grasin_workbench"
+  }
+}

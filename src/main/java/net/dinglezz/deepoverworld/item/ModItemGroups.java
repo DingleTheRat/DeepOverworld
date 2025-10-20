@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASIN_BOCK_B);
                         entries.add(ModBlocks.GRASIN_BOCK_C);
                         entries.add(ModBlocks.DEEP_SPROUT);
+                        entries.add(ModBlocks.GRASIN_WORKBENCH);
                     }).build());
 
 

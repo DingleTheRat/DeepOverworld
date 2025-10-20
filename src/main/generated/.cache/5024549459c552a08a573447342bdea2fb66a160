@@ -1,4 +1,5 @@
-// 1.21.1	2025-10-18T11:55:02.9811749	Deep Overworld/Block Loot Tables
+// 1.21.1	2025-10-20T10:54:26.4271727	Deep Overworld/Block Loot Tables
+cbd530a50fba99157bc4338e7c75a8cd79689b4b data\deepoverworld\loot_table\blocks\grasin_workbench.json
 c7286a4d90775fb0e2f482d90ea7f21367669cb1 data\deepoverworld\loot_table\blocks\grasin_block_a.json
 4e529ba8e7a445b7d5a7b923b2a31193d0183058 data\deepoverworld\loot_table\blocks\deepslate_grass.json
 5eae73dfeeabe5adad1a3b15e547f45664ad59d9 data\deepoverworld\loot_table\blocks\deep_log.json

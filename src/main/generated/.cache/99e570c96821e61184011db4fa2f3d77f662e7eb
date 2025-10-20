@@ -1,5 +1,5 @@
-// 1.21.1	2025-10-18T11:55:02.9831743	Deep Overworld/Tags for minecraft:block
-e26f1b7e959c1567c2a94a543ab873826cf0522c data\minecraft\tags\block\mineable\axe.json
+// 1.21.1	2025-10-20T10:54:26.4301727	Deep Overworld/Tags for minecraft:block
+951ed4768af461658a5b628fac53fd86cedc1667 data\minecraft\tags\block\mineable\axe.json
 1994eeb0bdc5324d6a105764c2c39eb3ed65a3ec data\minecraft\tags\block\mineable\hoe.json
 3c3ec61108217f5446391e4eac044e8778e02637 data\minecraft\tags\block\mineable\pickaxe.json
 ef0507e8ec406dec28e4f2f742c678a81a479e55 data\minecraft\tags\block\needs_stone_tool.json

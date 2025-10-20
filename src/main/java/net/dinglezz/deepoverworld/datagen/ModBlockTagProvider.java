@@ -19,10 +19,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         // Tools
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.DEEPSLATE_GRASS);
-
+        
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.DEEP_LOG)
-                .add(ModBlocks.DEEP_WOOD);
+                .add(ModBlocks.DEEP_WOOD)
+                .add(ModBlocks.GRASIN_WORKBENCH);
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.GRASIN_BOCK_A)

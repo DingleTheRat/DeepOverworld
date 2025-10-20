@@ -30,6 +30,9 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WART_BLOCK).requiresTool()));
     public static final Block GRASIN_BOCK_C = registerBlock("grasin_block_c",
             new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WART_BLOCK).requiresTool()));
+    public static final Block GRASIN_WORKBENCH = registerBlock("grasin_workbench",
+            new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WOOD)));
+    
     // Wood
     public static final Block DEEP_LOG = registerBlock("deep_log",
             new PillarBlock(AbstractBlock.Settings.copy(Blocks.SPRUCE_LOG).strength(4f)));

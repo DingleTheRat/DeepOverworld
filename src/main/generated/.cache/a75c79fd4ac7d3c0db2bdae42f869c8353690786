@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-18T11:55:02.9751738	Deep Overworld/Model Definitions
+// 1.21.1	2025-10-20T10:54:26.4151741	Deep Overworld/Model Definitions
 b9bde1b1c88cb9efe474e682a90dcce21ed34bd7 assets\deepoverworld\models\block\deep_log_horizontal.json
 83e9ed4a642b3a6f8a4cfc1ee61a162c8b305d1a assets\deepoverworld\models\block\decayed_grasin.json
 ec19adb422df5d5caeca6d1d01fe53bc2399e285 assets\deepoverworld\blockstates\deep_log.json
@@ -11,8 +11,8 @@ b7dd5c9eda2025a419003b70e8b945a4d6e0031f assets\deepoverworld\models\block\deep_
 ef94e22c449cca5d6a3ad6a53b9557cbbf92e86c assets\deepoverworld\models\item\grasin_block_a.json
 c79e08ee6bf70e290c9fbc4169c697be3ccd0ec6 assets\deepoverworld\models\item\grasin_b.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\deepoverworld\models\item\grasin_bug_c_spawn_egg.json
-f18cbc68ffec451f076efe88f83f8d908fa9fa49 assets\deepoverworld\blockstates\grasin_block_b.json
 6abce846e8db9bd23b0d25a2b6b0399ac0afc4ce assets\deepoverworld\models\item\deep_wood.json
+f18cbc68ffec451f076efe88f83f8d908fa9fa49 assets\deepoverworld\blockstates\grasin_block_b.json
 26322fb91b57202efff187e0f03a9fafd30397d5 assets\deepoverworld\models\block\grasin_block_a.json
 7b7f7bc9a344cd24cc3062976e9d5acd8bda1c60 assets\deepoverworld\blockstates\deep_sprout.json
 8e8e584286f8324b5e4c477b8fa61d70644e5acf assets\deepoverworld\blockstates\deep_wood.json
@@ -25,6 +25,9 @@ f22f7c3a90873c6037e608c455c2f9fb9ddae597 assets\deepoverworld\models\item\deep_s
 f9b90680ca934b48765cff1f7097b9bdfc52ac38 assets\deepoverworld\models\block\grasin_block_b.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\deepoverworld\models\item\grasin_bug_a_spawn_egg.json
 0d0c9ad5fe95531e99bed9fcc0b77f2b138d3e4a assets\deepoverworld\blockstates\grasin_block_c.json
+1db9f2d0aeac72673faa8f24e3c654935fbe7a3c assets\deepoverworld\blockstates\grasin_workbench.json
 6a488b629cacb54cc6e087ae7d8837ea529a69a4 assets\deepoverworld\models\item\deep_log.json
+15ce5189e062b1ee21cfb8655db48ef2e605e961 assets\deepoverworld\models\item\grasin_workbench.json
 be4c7f6ab597ffbe67326c1b8e419b19a500d359 assets\deepoverworld\models\item\decayed_grasin.json
 c1a666b3b7299f2c0a653f9e5313ca720f7b141a assets\deepoverworld\models\item\grasin_block_b.json
+f942faac0687861d019254a3c9431f1900fdc4a6 assets\deepoverworld\models\block\grasin_workbench.json

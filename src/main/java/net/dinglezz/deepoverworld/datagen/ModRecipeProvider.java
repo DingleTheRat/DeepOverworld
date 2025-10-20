@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -24,7 +25,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
           offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.GRASIN_A, RecipeCategory.MISC, ModBlocks.GRASIN_BOCK_A);
           offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.GRASIN_B, RecipeCategory.MISC, ModBlocks.GRASIN_BOCK_B);
           offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.MISC, ModItems.GRASIN_C, RecipeCategory.MISC, ModBlocks.GRASIN_BOCK_C);
-
+        
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.DEEP_SPROUT)
                 .pattern("   ")
                 .pattern(" G ")
@@ -32,6 +33,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S', Ingredient.fromTag(ItemTags.SAPLINGS))
                 .input('G', ModItems.GRASIN_B)
                 .criterion(hasItem(ModItems.GRASIN_B), conditionsFromItem(ModItems.GRASIN_B))  // Unlock recipe when grasin B obtained
+                .offerTo(recipeExporter);
+        
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModBlocks.GRASIN_WORKBENCH)
+                .pattern("BAC")
+                .pattern("IGI")
+                .pattern("PGP")
+                .input('P', ModBlocks.DEEP_WOOD)
+                .input('I', Items.IRON_INGOT)
+                .input('G', ModItems.GRASIN_GOO)
+                .input('A', ModItems.GRASIN_A)
+                .input('B', ModItems.GRASIN_B)
+                .input('C', ModItems.GRASIN_C)
+                .criterion(hasItem(ModItems.GRASIN_GOO), conditionsFromItem(ModItems.GRASIN_GOO))  // Unlock recipe when
+                // grasin B obtained
                 .offerTo(recipeExporter);
 
     }
