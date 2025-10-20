@@ -1,6 +1,7 @@
 package net.dinglezz.deepoverworld;
 
 import net.dinglezz.deepoverworld.block.ModBlocks;
+import net.dinglezz.deepoverworld.block.entity.ModBlockEntities;
 import net.dinglezz.deepoverworld.effect.ModEffects;
 import net.dinglezz.deepoverworld.enchantment.ModEnchantmentEffects;
 import net.dinglezz.deepoverworld.entity.ModEntities;
@@ -10,6 +11,7 @@ import net.dinglezz.deepoverworld.entity.custom.GrasinBugCEntity;
 import net.dinglezz.deepoverworld.item.ModItemGroups;
 import net.dinglezz.deepoverworld.item.ModItems;
 import net.dinglezz.deepoverworld.potion.ModPotions;
+import net.dinglezz.deepoverworld.screen.ModScreenHandlers;
 import net.dinglezz.deepoverworld.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -32,6 +34,8 @@ public class DeepOverworld implements ModInitializer {
         ModPotions.registerPotions();
         ModEnchantmentEffects.registerEnchantmentEffects();
         ModEntities.registerModEntities();
+        ModBlockEntities.registerBlockEntities();
+        ModScreenHandlers.registerScreenHandlers();
 
         ModWorldGeneration.generateModWorldGen();
 

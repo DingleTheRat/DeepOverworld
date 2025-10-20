@@ -2,6 +2,7 @@ package net.dinglezz.deepoverworld.block;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
 import net.dinglezz.deepoverworld.block.custom.DeepSprout;
+import net.dinglezz.deepoverworld.block.custom.GrasinWorkbench;
 import net.dinglezz.deepoverworld.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
@@ -31,7 +32,7 @@ public class ModBlocks {
     public static final Block GRASIN_BOCK_C = registerBlock("grasin_block_c",
             new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WART_BLOCK).requiresTool()));
     public static final Block GRASIN_WORKBENCH = registerBlock("grasin_workbench",
-            new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WOOD)));
+            new GrasinWorkbench(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WOOD)));
     
     // Wood
     public static final Block DEEP_LOG = registerBlock("deep_log",

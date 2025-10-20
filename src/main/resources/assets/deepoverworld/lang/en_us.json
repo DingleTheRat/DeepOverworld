@@ -46,5 +46,7 @@
 
   "entity.deepoverworld.grasin_bug_a": "Grasin Bug Type A",
   "entity.deepoverworld.grasin_bug_b": "Grasin Bug Type B",
-  "entity.deepoverworld.grasin_bug_c": "Grasin Bug Type C"
+  "entity.deepoverworld.grasin_bug_c": "Grasin Bug Type C",
+
+  "container.deepoverworld.grasin_workbench": "Grasin Workbench"
 }
