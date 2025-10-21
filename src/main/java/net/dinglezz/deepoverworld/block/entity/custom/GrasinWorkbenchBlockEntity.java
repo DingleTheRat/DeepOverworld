@@ -23,11 +23,18 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory<BlockPos>, ImplementedInventory {
 	private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
+	
+	private static final Recipe[] RECIPES = {
+			new Recipe(ModItems.GRASIN_A,
+					new ItemStack(ModItems.GRASIN_B, 1),
+					new ItemStack(ModItems.GRASIN_C, 2))
+	};
 	
 	private static final int INPUT_ITEM = 0;
 	private static final int INPUT_GOO = 1;
@@ -67,13 +74,13 @@ public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedS
 	}
 	
 	@Override
-	public DefaultedList<ItemStack> getItems() {
-		return inventory;
+	public BlockPos getScreenOpeningData(ServerPlayerEntity player) {
+		return this.pos;
 	}
 	
 	@Override
-	public BlockPos getScreenOpeningData(ServerPlayerEntity player) {
-		return this.pos;
+	public DefaultedList<ItemStack> getItems() {
+		return inventory;
 	}
 	
 	@Override
@@ -81,57 +88,10 @@ public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedS
 		return Text.translatable("container.deepoverworld.grasin_workbench");
 	}
 	
+	@Nullable
 	@Override
-	public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
+	public ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
 		return new GrasinWorkbenchScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
-	}
-	
-	public void tick(World world1, BlockPos pos, BlockState state1) {
-		if (hasRecipe()) {
-			this.progress++;
-			markDirty(world1, pos, state1);
-			if (this.progress >= this.maxProgress) {
-				craftItem();
-				this.progress = 0;
-				this.maxProgress = 72;
-			}
-		} else {
-			this.progress = 0;
-			this.maxProgress = 72;
-		}
-	}
-	
-	private void craftItem() {
-		this.removeStack(INPUT_ITEM, 1);
-		this.removeStack(INPUT_GOO, 1);
-		
-		setStack(OUTPUT_ITEM, new ItemStack(ModItems.GRASIN_B, this.getStack(OUTPUT_ITEM).getCount() + 1));
-		setStack(OUTPUT_BYPRODUCT, new ItemStack(ModItems.GRASIN_C, this.getStack(OUTPUT_BYPRODUCT).getCount() + 1));
-	}
-	
-	private boolean hasRecipe() {
-		Item input2 = ModItems.GRASIN_GOO;
-		ItemStack output1 = new ItemStack(ModItems.GRASIN_B);
-		ItemStack output2 = new ItemStack(ModItems.GRASIN_C);
-		
-		return isInputItemValid() && this.getStack(INPUT_GOO).isOf(input2) &&
-				canInsertIntoOutput(output1, OUTPUT_ITEM) && canInsertIntoOutput(output1.getCount(), OUTPUT_ITEM) &&
-				canInsertIntoOutput(output2, OUTPUT_BYPRODUCT) && canInsertIntoOutput(output2.getCount(), OUTPUT_BYPRODUCT);
-	}
-	
-	private boolean isInputItemValid() {
-		return this.getStack(INPUT_ITEM).isOf(ModItems.GRASIN_A);
-	}
-	
-	private boolean canInsertIntoOutput(ItemStack output, int slot) {
-		return this.getStack(slot).isEmpty() || this.getStack(slot).getItem() == output.getItem();
-	}
-	
-	private boolean canInsertIntoOutput(int count, int slot) {
-		int maxCount = this.getStack(slot).isEmpty() ? 64 : this.getStack(slot).getMaxCount();
-		int currentCount = this.getStack(slot).getCount();
-		
-		return maxCount >= currentCount + count;
 	}
 	
 	@Override
@@ -150,6 +110,96 @@ public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedS
 		super.readNbt(nbt, registryLookup);
 	}
 	
+	public void tick(World world, BlockPos pos, BlockState state) {
+		if(hasRecipe()) {
+			increaseCraftingProgress();
+			markDirty(world, pos, state);
+			
+			if(hasCraftingFinished()) {
+				craftItem();
+				resetProgress();
+			}
+		} else {
+			resetProgress();
+		}
+	}
+	
+	private void resetProgress() {
+		this.progress = 0;
+		this.maxProgress = 72;
+	}
+	
+	private void craftItem() {
+		ItemStack outputItem = getOutputItem();
+		ItemStack outputByproduct = getOutputByproduct();
+		this.removeStack(INPUT_ITEM, 1);
+		this.removeStack(INPUT_GOO, 1);
+		
+		this.setStack(OUTPUT_ITEM, new ItemStack(outputItem.getItem(),
+				this.getStack(OUTPUT_ITEM).getCount() + outputItem.getCount()));
+		this.setStack(OUTPUT_BYPRODUCT, new ItemStack(outputByproduct.getItem(),
+				this.getStack(OUTPUT_BYPRODUCT).getCount() + outputByproduct.getCount()));
+		System.out.println("Crafted: " + outputItem + " using " + getStack(INPUT_ITEM) + " + " + getStack(INPUT_GOO));
+	}
+	
+	private boolean hasCraftingFinished() {
+		return this.progress >= this.maxProgress;
+	}
+	
+	private void increaseCraftingProgress() {
+		this.progress++;
+	}
+	
+	private boolean hasRecipe() {
+		if (inventory.get(INPUT_GOO).isOf(ModItems.GRASIN_GOO) && isInRecipeList()) {
+			ItemStack outputItem = getOutputItem();
+			ItemStack outputByproduct = getOutputByproduct();
+			return canInsertAmountIntoOutputSlot(outputItem.getCount(), OUTPUT_ITEM) &&
+					canInsertItemIntoOutputSlot(outputItem, OUTPUT_ITEM) &&
+					canInsertAmountIntoOutputSlot(outputByproduct.getCount(), OUTPUT_BYPRODUCT) &&
+					canInsertItemIntoOutputSlot(outputByproduct, OUTPUT_BYPRODUCT);
+		} else return false;
+	}
+	
+	private ItemStack getOutputItem() {
+		for (Recipe recipe : RECIPES) {
+			if (inventory.getFirst().isOf(recipe.inputItem)) {
+				return recipe.outputItem;
+			}
+		}
+		return ItemStack.EMPTY;
+	}
+	
+	private ItemStack getOutputByproduct() {
+		for (Recipe recipe : RECIPES) {
+			if (inventory.getFirst().isOf(recipe.inputItem)) {
+				return recipe.outputByproduct;
+			}
+		}
+		return ItemStack.EMPTY;
+	}
+	
+	private boolean isInRecipeList() {
+		for (Recipe recipe : RECIPES) {
+			if (inventory.getFirst().isOf(recipe.inputItem)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean canInsertItemIntoOutputSlot(ItemStack output, int slot) {
+		return this.getStack(slot).isEmpty() || this.getStack(slot).getItem() == output.getItem();
+	}
+	
+	private boolean canInsertAmountIntoOutputSlot(int count, int slot) {
+		int maxCount = this.getStack(slot).isEmpty() ? 64 : this.getStack(slot).getMaxCount();
+		int currentCount = this.getStack(slot).getCount();
+		
+		return maxCount >= currentCount + count;
+	}
+	
+	@Nullable
 	@Override
 	public Packet<ClientPlayPacketListener> toUpdatePacket() {
 		return BlockEntityUpdateS2CPacket.create(this);
@@ -159,4 +209,70 @@ public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedS
 	public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registryLookup) {
 		return createNbt(registryLookup);
 	}
+	@Override
+	public int size() { return inventory.size(); }
+	
+	@Override
+	public boolean isEmpty() {
+		for (ItemStack stack : inventory) if (!stack.isEmpty()) return false;
+		return true;
+	}
+	
+	@Override
+	public ItemStack getStack(int slot) { return inventory.get(slot); }
+	
+	@Override
+	public ItemStack removeStack(int slot, int amount) {
+		return Inventories.splitStack(inventory, slot, amount);
+	}
+	
+	@Override
+	public ItemStack removeStack(int slot) {
+		return Inventories.removeStack(inventory, slot);
+	}
+	
+	@Override
+	public void setStack(int slot, ItemStack stack) {
+		inventory.set(slot, stack);
+		markDirty();
+	}
+	
+	@Override
+	public int[] getAvailableSlots(Direction side) {
+		if (side == Direction.UP) {
+			return new int[] {0};
+		} else if (side == Direction.DOWN) {
+			return new int[] {2, 3};
+		} else {
+			return new int[] {1};
+		}
+	}
+	
+	@Override
+	public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
+		if (dir == Direction.UP && slot == 0) {
+			return isValidMainIngredient(stack);
+		} else if (dir != Direction.UP && slot == 1) {
+			return isValidGoo(stack);
+		}
+		return false;
+	}
+	
+	@Override
+	public boolean canExtract(int slot, ItemStack stack, Direction dir) {
+		if (dir == Direction.DOWN) {
+			return slot == 2 || slot == 3;
+		}
+		return false;
+	}
+	
+	private boolean isValidMainIngredient(ItemStack stack) {
+		return stack.isOf(ModItems.GRASIN_A);
+	}
+	
+	private boolean isValidGoo(ItemStack stack) {
+		return stack.isOf(ModItems.GRASIN_GOO);
+	}
+	
+	record Recipe(Item inputItem, ItemStack outputItem, ItemStack outputByproduct) {}
 }

@@ -25,6 +25,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GRASIN_A);
                         entries.add(ModItems.GRASIN_B);
                         entries.add(ModItems.GRASIN_C);
+                        entries.add(ModItems.GRASIN_GOO);
 
                         entries.add(ModBlocks.GRASIN_BOCK_A);
                         entries.add(ModBlocks.GRASIN_BOCK_B);

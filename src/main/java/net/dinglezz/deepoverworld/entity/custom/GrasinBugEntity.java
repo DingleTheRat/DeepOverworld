@@ -1,6 +1,5 @@
 package net.dinglezz.deepoverworld.entity.custom;
 
-import net.dinglezz.deepoverworld.DeepOverworld;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -27,7 +26,6 @@ public abstract class GrasinBugEntity extends HostileEntity {
 	}
 	
 	private void setupAnimationStates() {
-		DeepOverworld.LOGGER.info(String.valueOf(this.getNavigation().isIdle()));
 		if (!this.getNavigation().isIdle()) {
 			if (this.walkingAnimationTimeout++ > 40) {
 				this.walkingAnimationState.start(this.age);
