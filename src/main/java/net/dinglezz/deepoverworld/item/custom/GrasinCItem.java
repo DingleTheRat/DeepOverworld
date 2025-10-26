@@ -21,19 +21,19 @@ public class GrasinCItem extends Item {
     public GrasinCItem(Settings settings) {
         super(settings);
     }
-
+    
     @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
         if (entity instanceof ServerPlayerEntity player) {
-
+            
             ItemStack helmetStack = player.getInventory().getStack(EquipmentSlot.HEAD.getEntitySlotId());
             Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
             RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getEntry(ModEnchantments.GRASIN_PROTECTION.getValue()).orElseThrow();
             boolean hasEnchantment = EnchantmentHelper.getLevel(enchantmentReference, helmetStack) > 2;
-
+            
             if (!hasEnchantment) player.addStatusEffect(new StatusEffectInstance(ModEffects.GRASIN_POISONING_TRES, 1800, 2));
         }
-
+        
         super.inventoryTick(stack, world, entity, slot);
     }
 }

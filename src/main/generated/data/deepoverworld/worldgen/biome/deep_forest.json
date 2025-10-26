@@ -54,10 +54,12 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:trees_plains",
-      "minecraft:patch_pumpkin",
-      "minecraft:patch_sugar_cane",
-      "minecraft:patch_firefly_bush_near_water"
+      "deepoverworld:deep_tree_placed",
+      "minecraft:forest_flowers",
+      "minecraft:patch_large_fern",
+      "minecraft:brown_mushroom_normal",
+      "minecraft:red_mushroom_normal",
+      "minecraft:patch_pumpkin"
     ],
     [
       "minecraft:freeze_top_layer"
@@ -77,32 +79,50 @@
     "axolotls": [],
     "creature": [
       {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
+        "type": "minecraft:wolf",
+        "maxCount": 5,
         "minCount": 4,
-        "weight": 12
+        "weight": 100
       },
       {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
+        "type": "deepoverworld:grasin_bug_a",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 1000
       },
       {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
+        "type": "deepoverworld:grasin_bug_b",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 500
       },
       {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
+        "type": "deepoverworld:grasin_bug_c",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 250
       }
     ],
     "misc": [],
     "monster": [
+      {
+        "type": "deepoverworld:grasin_bug_a",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 1000
+      },
+      {
+        "type": "deepoverworld:grasin_bug_b",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 500
+      },
+      {
+        "type": "deepoverworld:grasin_bug_c",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 250
+      },
       {
         "type": "minecraft:spider",
         "maxCount": 4,

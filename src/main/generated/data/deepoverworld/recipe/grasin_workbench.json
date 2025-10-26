@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "deepoverworld:grasin_a",
+    "B": "deepoverworld:grasin_b",
+    "C": "deepoverworld:grasin_c",
+    "G": "deepoverworld:grasin_goo",
+    "I": "minecraft:iron_ingot",
+    "P": "deepoverworld:deep_wood"
+  },
+  "pattern": [
+    "BAC",
+    "IGI",
+    "PGP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "deepoverworld:grasin_workbench"
+  }
+}

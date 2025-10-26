@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grasin_goo": {
+      "conditions": {
+        "items": [
+          {
+            "items": "deepoverworld:grasin_goo"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "deepoverworld:grasin_workbench"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grasin_goo"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "deepoverworld:grasin_workbench"
+    ]
+  }
+}

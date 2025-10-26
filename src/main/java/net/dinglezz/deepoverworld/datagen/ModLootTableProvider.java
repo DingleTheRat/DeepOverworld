@@ -29,6 +29,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DEEPSLATE_GRASS);
         addDrop(ModBlocks.DEEP_LOG);
         addDrop(ModBlocks.DEEP_WOOD);
+        addDrop(ModBlocks.GRASIN_WORKBENCH);
         addDrop(ModBlocks.DECAYED_GRASIN, multipleOreDrops(ModBlocks.DECAYED_GRASIN, ModItems.GRASIN_A, 1, 3));
         addDrop(ModBlocks.GRASIN_BOCK_A, multipleOreDrops(ModBlocks.GRASIN_BOCK_A, ModItems.GRASIN_A, 6, 9));
         addDrop(ModBlocks.GRASIN_BOCK_B, multipleOreDrops(ModBlocks.GRASIN_BOCK_B, ModItems.GRASIN_B, 6, 9));

@@ -2,6 +2,7 @@ package net.dinglezz.deepoverworld.block;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
 import net.dinglezz.deepoverworld.block.custom.DeepSprout;
+import net.dinglezz.deepoverworld.block.custom.GrasinWorkbench;
 import net.dinglezz.deepoverworld.world.tree.ModSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -23,7 +24,7 @@ public class ModBlocks {
             properties -> new GrassBlock(properties.strength(3.0F, 6.0F)
                     .requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
     public static final Block DEEP_SPROUT = registerBlock("deep_sprout",
-            properties -> new DeepSprout(ModSaplingGenerators.DEEP, properties.noCollision().ticksRandomly().breakInstantly()
+        properties -> new DeepSprout(ModSaplingGenerators.DEEP, properties.noCollision().ticksRandomly().breakInstantly()
                 .pistonBehavior(PistonBehavior.DESTROY).sounds(BlockSoundGroup.NYLIUM).nonOpaque()));
 
     // Grasin
@@ -35,7 +36,10 @@ public class ModBlocks {
             properties -> new Block(properties.strength(1f).sounds(BlockSoundGroup.WART_BLOCK).requiresTool()));
     public static final Block GRASIN_BOCK_C = registerBlock("grasin_block_c",
             properties -> new Block(properties.strength(1f).sounds(BlockSoundGroup.WART_BLOCK).requiresTool()));
-
+	public static final Block GRASIN_WORKBENCH = registerBlock("grasin_workbench",
+			properties -> new GrasinWorkbench(properties.registryKey(RegistryKey.of(RegistryKeys.BLOCK,
+					Identifier.of(DeepOverworld.MOD_ID, "grasin_workbench"))).strength(1f).sounds(BlockSoundGroup.WOOD)));
+    
     // Wood
     public static final Block DEEP_LOG = registerBlock("deep_log",
             properties -> new PillarBlock(properties.instrument(NoteBlockInstrument.BASS).sounds(BlockSoundGroup.WOOD).strength(4f)));
@@ -44,16 +48,19 @@ public class ModBlocks {
 
     // Functions
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
-        Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name))));
+        Block toRegister = function.apply(AbstractBlock.Settings.create()
+                .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name))));
         registerBlockItem(name, toRegister);
         return Registry.register(Registries.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name), toRegister);
     }
-
-    private static Block registerBlockWithoutBlockItem(String name, Function<AbstractBlock.Settings, Block> function) {
-        return Registry.register(Registries.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name),
-                function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name)))));
-    }
-
+    
+    // private static Block registerBlockWithoutBlockItem(String name, Function<AbstractBlock.Settings, Block>
+    // function) {
+    //     return Registry.register(Registries.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name),
+    //             function.apply(AbstractBlock.Settings.create().registryKey(
+    //                     RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(DeepOverworld.MOD_ID, name)))));
+    // }
+    
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(DeepOverworld.MOD_ID, name),
                 new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()

@@ -22,6 +22,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.DEEP_LOG)
+                .add(ModBlocks.DEEP_WOOD)
+                .add(ModBlocks.GRASIN_WORKBENCH)
                 .add(ModBlocks.DEEP_WOOD);
 
         valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
@@ -37,7 +39,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GRASIN_BOCK_A)
                 .add(ModBlocks.GRASIN_BOCK_B)
                 .add(ModBlocks.GRASIN_BOCK_C);
-
+        
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DEEPSLATE_GRASS)
                 .add(ModBlocks.DEEP_LOG)

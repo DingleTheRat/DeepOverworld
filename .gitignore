@@ -28,6 +28,7 @@ bin/
 # fabric
 
 run/
+/minecraft-assets/
 
 # java
 

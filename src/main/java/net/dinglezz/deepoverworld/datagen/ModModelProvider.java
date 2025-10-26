@@ -7,6 +7,10 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.minecraft.client.data.BlockStateModelGenerator;
 import net.minecraft.client.data.ItemModelGenerator;
 import net.minecraft.client.data.Models;
+import net.minecraft.client.data.*;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -20,7 +24,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN_BOCK_A);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN_BOCK_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN_BOCK_C);
-        blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.DEEP_SPROUT, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerSingleton(ModBlocks.GRASIN_WORKBENCH, TexturedModel.CUBE_BOTTOM_TOP);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DEEP_SPROUT, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override
@@ -28,5 +33,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GRASIN_A, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRASIN_B, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRASIN_C, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRASIN_GOO, Models.GENERATED);
+        
+        itemModelGenerator.register(ModItems.GRASIN_BUG_A_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.GRASIN_BUG_B_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.GRASIN_BUG_C_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
     }
 }

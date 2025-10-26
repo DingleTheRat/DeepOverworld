@@ -14,6 +14,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
+import org.jetbrains.annotations.Nullable;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,19 +23,19 @@ public class GrasinBItem extends Item {
     public GrasinBItem(Settings settings) {
         super(settings);
     }
-
+    
     @Override
     public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
         if (entity instanceof ServerPlayerEntity player) {
-
+            
             ItemStack helmetStack = player.getInventory().getStack(EquipmentSlot.HEAD.getEntitySlotId());
             Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
             RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getEntry(ModEnchantments.GRASIN_PROTECTION.getValue()).orElseThrow();
             boolean hasEnchantment = EnchantmentHelper.getLevel(enchantmentReference, helmetStack) > 1;
-
+            
             if (!hasEnchantment) player.addStatusEffect(new StatusEffectInstance(ModEffects.GRASIN_POISONING_DOS, 1800, 1));
         }
-
+        
         super.inventoryTick(stack, world, entity, slot);
     }
 }

@@ -21,10 +21,10 @@ public class GrasinPoisoningEffect extends StatusEffect {
         else if (amplifier == 2 && entity.getHealth() > 5.0F) {
             entity.damage(world, entity.getDamageSources().magic(), 1.0F);
         }
-
+        
         return true;
     }
-
+    
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
         int i = 40 >> 2;
         return duration % i == 0;
