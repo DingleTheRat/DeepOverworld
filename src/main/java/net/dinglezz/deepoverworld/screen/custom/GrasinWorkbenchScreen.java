@@ -1,9 +1,9 @@
 package net.dinglezz.deepoverworld.screen.custom;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -23,7 +23,7 @@ public class GrasinWorkbenchScreen extends HandledScreen<GrasinWorkbenchScreenHa
 		int x = (width - backgroundWidth) / 2;
 		int y = (height - backgroundHeight) / 2;
 		
-		context.drawTexture(RenderLayer::getGuiTextured, GUI_TEXTURE, x, y, 0, 0,
+		context.drawTexture(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x, y, 0, 0,
 				backgroundWidth, backgroundHeight, 256, 256);
 		
 		renderProgressArrow(context, x, y);
@@ -31,7 +31,7 @@ public class GrasinWorkbenchScreen extends HandledScreen<GrasinWorkbenchScreenHa
 	
 	private void renderProgressArrow(DrawContext context, int x, int y) {
 		if(handler.isCrafting()) {
-			context.drawTexture(RenderLayer::getGuiTextured, ARROW_TEXTURE, x + 73, y + 35, 0, 0,
+			context.drawTexture(RenderPipelines.GUI_TEXTURED, ARROW_TEXTURE, x + 73, y + 35, 0, 0,
 					handler.getScaledArrowProgress(), 16, 24, 16);
 		}
 	}

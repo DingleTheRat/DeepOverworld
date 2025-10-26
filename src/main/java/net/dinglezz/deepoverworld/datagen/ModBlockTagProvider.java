@@ -17,35 +17,35 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         // Tools
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.DEEPSLATE_GRASS);
         
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
+        valueLookupBuilder(BlockTags.AXE_MINEABLE)
                 .add(ModBlocks.DEEP_LOG)
                 .add(ModBlocks.DEEP_WOOD)
                 .add(ModBlocks.GRASIN_WORKBENCH);
-
-        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+        
+        valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(ModBlocks.GRASIN_BOCK_A)
                 .add(ModBlocks.GRASIN_BOCK_B)
                 .add(ModBlocks.GRASIN_BOCK_C);
-
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+        
+        valueLookupBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.DECAYED_GRASIN);
 
         // Needs?
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.GRASIN_BOCK_A)
                 .add(ModBlocks.GRASIN_BOCK_B)
                 .add(ModBlocks.GRASIN_BOCK_C);
-
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.DEEPSLATE_GRASS)
                 .add(ModBlocks.DEEP_LOG)
                 .add(ModBlocks.DEEP_WOOD);
 
         // Custom
-        getOrCreateTagBuilder(ModTags.Blocks.DEEP_VEGETATION)
+        valueLookupBuilder(ModTags.Blocks.DEEP_VEGETATION)
                 .add(ModBlocks.DEEPSLATE_GRASS)
                 .add(ModBlocks.GRASIN_BOCK_A)
                 .add(ModBlocks.GRASIN_BOCK_C)

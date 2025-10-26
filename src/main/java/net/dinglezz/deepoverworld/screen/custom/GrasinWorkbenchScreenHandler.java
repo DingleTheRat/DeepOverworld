@@ -19,7 +19,7 @@ public class GrasinWorkbenchScreenHandler extends ScreenHandler {
 	public final GrasinWorkbenchBlockEntity blockEntity;
 	
 	public GrasinWorkbenchScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-		this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(4));
+		this(syncId, inventory, inventory.player.getEntityWorld().getBlockEntity(pos), new ArrayPropertyDelegate(4));
 	}
 	
 	public GrasinWorkbenchScreenHandler(int syncId, PlayerInventory playerInventory,

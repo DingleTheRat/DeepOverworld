@@ -20,6 +20,8 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.text.Text;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -101,21 +103,20 @@ public class GrasinWorkbenchBlockEntity extends BlockEntity implements ExtendedS
 		super.onBlockReplaced(pos, oldState);
 	}
 	
-	
 	@Override
-	protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-		super.writeNbt(nbt, registryLookup);
-		Inventories.writeNbt(nbt, inventory, registryLookup);
-		nbt.putInt("grasin_workbench.progress", progress);
-		nbt.putInt("grasin_workbench.max_progress", maxProgress);
+	protected void writeData(WriteView view) {
+		super.writeData(view);
+		Inventories.writeData(view, inventory);
+		view.putInt("grasin_workbench.progress", progress);
+		view.putInt("grasin_workbench.max_progress", maxProgress);
 	}
 	
 	@Override
-	protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-		Inventories.readNbt(nbt, inventory, registryLookup);
-		progress = nbt.getInt("grasin_workbench.progress").get();
-		maxProgress = nbt.getInt("grasin_workbench.max_progress").get();
-		super.readNbt(nbt, registryLookup);
+	protected void readData(ReadView view) {
+		super.readData(view);
+		Inventories.readData(view, inventory);
+		progress = view.getInt("grasin_workbench.progress", 0);
+		maxProgress = view.getInt("grasin_workbench.max_progress", 72);
 	}
 	
 	public void tick(World world, BlockPos pos, BlockState state) {

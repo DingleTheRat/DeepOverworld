@@ -48,7 +48,7 @@ public class GrasinWorkbench extends BlockWithEntity implements BlockEntityProvi
 	
 	@Override
 	protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
-		if (!world.isClient) {
+		if (!world.isClient()) {
 			NamedScreenHandlerFactory screenHandlerFactory = ((GrasinWorkbenchBlockEntity) world.getBlockEntity(pos));
 			if (screenHandlerFactory != null) {
 				player.openHandledScreen(screenHandlerFactory);

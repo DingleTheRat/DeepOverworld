@@ -35,7 +35,7 @@ public class GrasinBugAEntity extends GrasinBugEntity {
 	@Override
 	protected void dropLoot(ServerWorld world, DamageSource source, boolean causedByPlayer) {
 		super.dropLoot(world, source, causedByPlayer);
-		if (!this.getWorld().isClient()) {
+		if (!this.getEntityWorld().isClient()) {
 			if (this.random.nextFloat() < 0.5f) {
 				this.dropItem(world, ModItems.GRASIN_A);
 			} else if (this.random.nextFloat() < 0.5f) {

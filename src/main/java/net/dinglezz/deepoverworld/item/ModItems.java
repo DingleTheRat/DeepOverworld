@@ -54,11 +54,11 @@ public class ModItems {
     });
     
     public static final Item GRASIN_BUG_A_SPAWN_EGG = registerItem("grasin_bug_a_spawn_egg", settings ->
-            new SpawnEggItem(ModEntities.GRASIN_BUG_A, settings));
+            new SpawnEggItem(settings.spawnEgg(ModEntities.GRASIN_BUG_A)));
     public static final Item GRASIN_BUG_B_SPAWN_EGG = registerItem("grasin_bug_b_spawn_egg", settings ->
-            new SpawnEggItem(ModEntities.GRASIN_BUG_B, settings));
+            new SpawnEggItem(settings.spawnEgg(ModEntities.GRASIN_BUG_B)));
     public static final Item GRASIN_BUG_C_SPAWN_EGG = registerItem("grasin_bug_c_spawn_egg", settings ->
-            new SpawnEggItem(ModEntities.GRASIN_BUG_C, settings));
+            new SpawnEggItem(settings.spawnEgg(ModEntities.GRASIN_BUG_C)));
 
     // Functions
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
