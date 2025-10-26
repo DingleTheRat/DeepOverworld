@@ -18,6 +18,6 @@ public class GrasinBugCRenderer extends MobEntityRenderer<GrasinBugCEntity, Gras
 	
 	@Override
 	public Identifier getTexture(GrasinBugRenderState entity) {
-		return Identifier.of(DeepOverworld.MOD_ID, "textures/entity/grasin_bug_type_v.png");
+		return Identifier.of(DeepOverworld.MOD_ID, "textures/entity/grasin_bug_type_c.png");
 	}
 }

@@ -54,12 +54,10 @@
     ],
     [
       "minecraft:glow_lichen",
-      "deepoverworld:deep_tree_placed",
-      "minecraft:forest_flowers",
-      "minecraft:patch_large_fern",
-      "minecraft:brown_mushroom_normal",
-      "minecraft:red_mushroom_normal",
-      "minecraft:patch_pumpkin"
+      "minecraft:trees_plains",
+      "minecraft:patch_pumpkin",
+      "minecraft:patch_sugar_cane",
+      "minecraft:patch_firefly_bush_near_water"
     ],
     [
       "minecraft:freeze_top_layer"

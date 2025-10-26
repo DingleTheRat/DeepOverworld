@@ -2,7 +2,6 @@ package net.dinglezz.deepoverworld.world.biome;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
 import net.dinglezz.deepoverworld.entity.ModEntities;
-import net.dinglezz.deepoverworld.world.ModPlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -16,6 +15,7 @@ import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> DEEP_FOREST =
@@ -55,10 +55,10 @@ public class ModBiomes {
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
 
         biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
-//        DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
-//        DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
-//
-//        DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
+        // DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
+        // DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
+        //
+        // DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
         DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder, true);
 
         return new Biome.Builder()
