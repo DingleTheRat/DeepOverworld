@@ -2,24 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "A": {
-      "item": "deepoverworld:grasin_a"
-    },
-    "B": {
-      "item": "deepoverworld:grasin_b"
-    },
-    "C": {
-      "item": "deepoverworld:grasin_c"
-    },
-    "G": {
-      "item": "deepoverworld:grasin_goo"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "P": {
-      "item": "deepoverworld:deep_wood"
-    }
+    "A": "deepoverworld:grasin_a",
+    "B": "deepoverworld:grasin_b",
+    "C": "deepoverworld:grasin_c",
+    "G": "deepoverworld:grasin_goo",
+    "I": "minecraft:iron_ingot",
+    "P": "deepoverworld:deep_wood"
   },
   "pattern": [
     "BAC",

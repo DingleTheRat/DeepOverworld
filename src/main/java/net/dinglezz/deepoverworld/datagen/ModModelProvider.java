@@ -2,9 +2,9 @@ package net.dinglezz.deepoverworld.datagen;
 
 import net.dinglezz.deepoverworld.block.ModBlocks;
 import net.dinglezz.deepoverworld.item.ModItems;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.*;
+import net.minecraft.client.data.*;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN_BOCK_B);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRASIN_BOCK_C);
         blockStateModelGenerator.registerSingleton(ModBlocks.GRASIN_WORKBENCH, TexturedModel.CUBE_BOTTOM_TOP);
-        blockStateModelGenerator.registerTintableCross(ModBlocks.DEEP_SPROUT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.DEEP_SPROUT, BlockStateModelGenerator.CrossType.NOT_TINTED);
     }
 
     @Override

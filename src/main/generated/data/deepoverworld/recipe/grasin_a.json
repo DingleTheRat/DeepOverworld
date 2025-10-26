@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "deepoverworld:grasin_block_a"
-    }
+    "deepoverworld:grasin_block_a"
   ],
   "result": {
     "count": 9,

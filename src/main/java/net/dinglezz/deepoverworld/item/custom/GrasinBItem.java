@@ -24,8 +24,8 @@ public class GrasinBItem extends Item {
         if (entity instanceof ServerPlayerEntity player) {
 
             ItemStack helmetStack = player.getInventory().armor.get(3);
-            Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().get(RegistryKeys.ENCHANTMENT);
-            RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getEntry(ModEnchantments.GRASIN_PROTECTION).orElseThrow();
+            Registry<Enchantment> enchantmentRegistry = world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT);
+            RegistryEntry.Reference<Enchantment> enchantmentReference = enchantmentRegistry.getOrThrow(ModEnchantments.GRASIN_PROTECTION);
             boolean hasEnchantment = EnchantmentHelper.getLevel(enchantmentReference, helmetStack) > 1;
 
             if (!hasEnchantment) {
