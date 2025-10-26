@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Deep Overworld/Model Definitions
+// 1.21.5	-999999999-01-01T00:00:00	Deep Overworld/Model Definitions
 3a732c7360b06aab2bd926835c719e11e5dfe0b5 assets/deepoverworld/blockstates/decayed_grasin.json
 ec19adb422df5d5caeca6d1d01fe53bc2399e285 assets/deepoverworld/blockstates/deep_log.json
 7b7f7bc9a344cd24cc3062976e9d5acd8bda1c60 assets/deepoverworld/blockstates/deep_sprout.json
@@ -11,7 +11,6 @@ f18cbc68ffec451f076efe88f83f8d908fa9fa49 assets/deepoverworld/blockstates/grasin
 ec902dd05f5e83fe904f322763a4cc3de8f4fdaa assets/deepoverworld/items/deep_log.json
 33413964cccfca56aa4524a770a04ab9eceecf6b assets/deepoverworld/items/deep_sprout.json
 3aebb8e2924b59b43778a50b7aa6e86cf719e4a1 assets/deepoverworld/items/deep_wood.json
-ba720363f45f435fe2448d5e967e7873db183ed1 assets/deepoverworld/items/deepslate_grass.json
 d0aab5975f0a8bda4f464408cfec60fe0e5601c2 assets/deepoverworld/items/grasin_a.json
 9bec0e0f5f8e35b6514740b712d62fc78039db57 assets/deepoverworld/items/grasin_b.json
 522c0a30c943bff8da84f42299b8ff1a84ad5940 assets/deepoverworld/items/grasin_block_a.json

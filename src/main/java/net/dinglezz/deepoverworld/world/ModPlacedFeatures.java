@@ -19,7 +19,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> DEEP_TREE_PLACED_KEY = registerKey("deep_tree_placed");
     public static final RegistryKey<PlacedFeature> GRASIN_C_GEN_PLACED_KEY = registerKey("grasin_a_gen_placed");
     public static final RegistryKey<PlacedFeature> GRASIN_B_GEN_PLACED_KEY = registerKey("grasin_c_gen_placed");
-
+    
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 

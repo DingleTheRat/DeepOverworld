@@ -2,6 +2,7 @@ package net.dinglezz.deepoverworld.world.biome;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
 import net.dinglezz.deepoverworld.entity.ModEntities;
+import net.dinglezz.deepoverworld.world.ModPlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -15,7 +16,6 @@ import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> DEEP_FOREST =
@@ -37,13 +37,13 @@ public class ModBiomes {
     public static Biome deep_forest(Registerable<Biome> context){
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.WOLF, 5, 4, 4));
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_A, 1000, 1, 3));
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_B, 500, 1, 2));
-        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_C, 250, 1, 2));
-        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_A, 1000, 1, 3));
-        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_B, 500, 1, 2));
-        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_C, 250, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, 100, new SpawnSettings.SpawnEntry(EntityType.WOLF, 4, 5));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, 1000, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_A, 1, 3));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, 500, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_B, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, 250, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_C, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, 1000, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_A, 1, 3));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, 500, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_B, 1, 2));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, 250, new SpawnSettings.SpawnEntry(ModEntities.GRASIN_BUG_C, 1, 2));
 
         DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
 
@@ -53,13 +53,13 @@ public class ModBiomes {
 
         globalOverworldGeneration(biomeBuilder);
         DefaultBiomeFeatures.addExtraGoldOre(biomeBuilder);
-
-        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.TREES_PLAINS);
+        
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.DEEP_TREE_PLACED_KEY);
         DefaultBiomeFeatures.addForestFlowers(biomeBuilder);
         DefaultBiomeFeatures.addLargeFerns(biomeBuilder);
 
         DefaultBiomeFeatures.addDefaultMushrooms(biomeBuilder);
-        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder);
+        DefaultBiomeFeatures.addDefaultVegetation(biomeBuilder, false);
 
         return new Biome.Builder()
                 .precipitation(false)

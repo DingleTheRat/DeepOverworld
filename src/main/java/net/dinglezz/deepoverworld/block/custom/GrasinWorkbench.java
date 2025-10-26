@@ -12,8 +12,8 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
-import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -42,15 +42,8 @@ public class GrasinWorkbench extends BlockWithEntity implements BlockEntityProvi
 	}
 	
 	@Override
-	protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-		if(state.getBlock() != newState.getBlock()) {
-			BlockEntity blockEntity = world.getBlockEntity(pos);
-			if(blockEntity instanceof GrasinWorkbenchBlockEntity) {
-				ItemScatterer.spawn(world, pos, ((GrasinWorkbenchBlockEntity) blockEntity));
-				world.updateComparators(pos, this);
-			}
-			super.onStateReplaced(state, world, pos, newState, moved);
-		}
+	protected void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
+		super.onStateReplaced(state, world, pos, moved);
 	}
 	
 	@Override

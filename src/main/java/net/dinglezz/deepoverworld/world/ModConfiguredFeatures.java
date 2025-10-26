@@ -20,7 +20,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> DEEP_TREE_KEY = registerKey("deep_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GRASIN_B_GEN_KEY = registerKey("grasin_c_gen_key");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GRASIN_C_GEN_KEY = registerKey("grasin_a_gen_key");
-
+    
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, DEEP_TREE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.DEEP_LOG),
