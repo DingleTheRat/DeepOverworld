@@ -2,6 +2,7 @@ package net.dinglezz.deepoverworld.world;
 
 import net.dinglezz.deepoverworld.DeepOverworld;
 import net.dinglezz.deepoverworld.block.ModBlocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -29,7 +30,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.DECAYED_GRASIN),
                 new SpruceFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), ConstantIntProvider.create(2)),
 
-                new TwoLayersFeatureSize(3, 1, 3)).build());
+                new TwoLayersFeatureSize(3, 1, 3)).dirtProvider(BlockStateProvider.of(Blocks.DEEPSLATE)).build());
 
         register(context, GRASIN_B_GEN_KEY, Feature.RANDOM_PATCH,
                 new RandomPatchFeatureConfig(
